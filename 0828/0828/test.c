@@ -14,7 +14,7 @@ typedef struct PersonInfo{
 
 typedef struct AddrBook{
 	PersonInfo  persons[PERSONS_MAX_SIZE];
-	int size;       //µ±Ç°Êı×éÖĞµÄÓĞĞ§ÔªËØµÄ¸öÊı.
+	int size;       //å½“å‰æ•°ç»„ä¸­çš„æœ‰æ•ˆå…ƒç´ çš„ä¸ªæ•°.
 }AddrBook;
 
 void  Init(AddrBook* addr_book){
@@ -27,35 +27,35 @@ void  Init(AddrBook* addr_book){
 }
 
 void Add(AddrBook* addr_book){
-	printf("Ìí¼ÓĞÂÁªÏµÈË\n");
+	printf("æ·»åŠ æ–°è”ç³»äºº\n");
 	if (addr_book->size >= PERSONS_MAX_SIZE){
-		printf("µ±Ç°Í¨Ñ¶Â¼ÒÑÂú¡£\n");
+		printf("å½“å‰é€šè®¯å½•å·²æ»¡ã€‚\n");
 		return;
 	}
-	PersonInfo* p = &addr_book->persons[addr_book->size];//°Ñµ±Ç°Òª·ÅÖÃÎ»ÖÃµÄÏÂ±êÈ¡³öÀ´£¬È»ºóÈ¡³ö¶ÔÓ¦½á¹¹Ìå±äÁ¿µÄÖ¸Õë¡£
-	printf("ÇëÊäÈëĞÂÓÃ»§µÄĞÕÃû£º");
-	scanf("%s", p->name);
-	printf("ÇëÊäÈëĞÂÓÃ»§µÄºÅÂë£º");
-	scanf("%s", p->phone);
+	PersonInfo* p = &addr_book->persons[addr_book->size];//æŠŠå½“å‰è¦æ”¾ç½®ä½ç½®çš„ä¸‹æ ‡å–å‡ºæ¥ï¼Œç„¶åå–å‡ºå¯¹åº”ç»“æ„ä½“å˜é‡çš„æŒ‡é’ˆã€‚
+	printf("è¯·è¾“å…¥æ–°ç”¨æˆ·çš„å§“åï¼š");
+	scanf("%s",p->name);
+	printf("è¯·è¾“å…¥æ–°ç”¨æˆ·çš„å·ç ï¼š");
+	scanf("%s",p->phone);
 	++addr_book->size;
 
-	printf("Ìí¼ÓÁªÏµÈË³É¹¦¡£\n");
+	printf("æ·»åŠ è”ç³»äººæˆåŠŸã€‚\n");
 
 }
 
 
 void Remove(AddrBook* addr_book){
 	assert(addr_book != NULL);
-	printf("É¾³ıÍ¨Ñ¶Â¼ÖĞµÄ¼ÇÂ¼¡£\n");
+	printf("åˆ é™¤é€šè®¯å½•ä¸­çš„è®°å½•ã€‚\n");
 	if (addr_book->size == 0){
-		printf("µ±Ç°Í¨Ñ¶Â¼Îª¿Õ£¡\n");
+		printf("å½“å‰é€šè®¯å½•ä¸ºç©ºï¼\n");
 		return;
 	}
-	printf("ÇëÊäÈëÒªÉ¾³ıµÄĞòºÅ:");
+	printf("è¯·è¾“å…¥è¦åˆ é™¤çš„åºå·:");
 	int index = 0;
 	scanf("%d", &index);
 	if (index < 0 || index >= addr_book->size){
-		printf("ÄúµÄÊäÈëÓĞÎó£¡[0-%d]\n", addr_book->size - 1);
+		printf("æ‚¨çš„è¾“å…¥æœ‰è¯¯ï¼[0-%d]\n", addr_book->size - 1);
 		return;
 	}
 	if (index == addr_book->size - 1){
@@ -67,7 +67,7 @@ void Remove(AddrBook* addr_book){
 		strcpy(mid->phone, last->phone);
 		--addr_book->size;
 	}
-	printf("É¾³ı³É¹¦£¬µ±Ç°»¹Ê£%dÌõ¼ÇÂ¼£¡\n", addr_book->size);
+	printf("åˆ é™¤æˆåŠŸï¼Œå½“å‰è¿˜å‰©%dæ¡è®°å½•ï¼\n", addr_book->size);
 }
 
 
@@ -78,53 +78,53 @@ void Printall(AddrBook* addr_book){
 		PersonInfo* p = &addr_book->persons[i];
 		printf("[%d]  %s:  %s\n", i,p->name,p->phone );
 	}
-	printf("µ±Ç°¹²ÓĞ%dÌõ¼ÇÂ¼\n", addr_book->size);
+	printf("å½“å‰å…±æœ‰%dæ¡è®°å½•\n", addr_book->size);
 	printf("=======================\n");
 }
 
 
 void Update(AddrBook* addr_book){
 	assert(addr_book != NULL);
-	printf("¸üĞÂÁªÏµÈË¼ÇÂ¼!\n");
+	printf("æ›´æ–°è”ç³»äººè®°å½•!\n");
 	if (addr_book->size == 0){
-		printf("µ±Ç°Í¨Ñ¶Â¼Îª¿Õ£¬ÎŞ·¨ĞŞ¸Ä£¡\n");
+		printf("å½“å‰é€šè®¯å½•ä¸ºç©ºï¼Œæ— æ³•ä¿®æ”¹ï¼\n");
 		return;
 	}
-	printf("ÇëÊäÈëÒªĞŞ¸ÄÁªÏµÈË¼ÇÂ¼µÄĞòºÅ£º");
+	printf("è¯·è¾“å…¥è¦ä¿®æ”¹è”ç³»äººè®°å½•çš„åºå·ï¼š");
 	int index = 0;
 	scanf("%d", &index);
 	if (index < 0 || index >= addr_book->size){
-		printf("ÄúµÄÊäÈëÓĞÎó£¡[0-%d]\n", addr_book->size - 1);
+		printf("æ‚¨çš„è¾“å…¥æœ‰è¯¯ï¼[0-%d]\n", addr_book->size - 1);
 		return;
 	}
 	PersonInfo* p = &addr_book->persons[index];
 	char name[NAME_MAX_SIZE] = { 0 };
 	char phone[PHONE_MAX_SIZE] = { 0 };
 
-	printf("µ±Ç°ĞÕÃûÎª£º%s\nÇëÊäÈëĞŞ¸ÄÖ®ºóµÄĞÕÃû£¨*±íÊ¾¸Ã×Ö¶Î²»ĞŞ¸Ä£©£º",p->name);
-	scanf("%s", p->name);
+	printf("å½“å‰å§“åä¸ºï¼š%s\nè¯·è¾“å…¥ä¿®æ”¹ä¹‹åçš„å§“åï¼ˆ*è¡¨ç¤ºè¯¥å­—æ®µä¸ä¿®æ”¹ï¼‰ï¼š",p->name);
+	scanf("%s", name);
 	if (strcmp(name, "*") != 0){
 		strcpy(p->name, name);
 	}
-	printf("µ±Ç°ºÅÂëÎª£º%s\nÇëÊäÈëĞŞ¸ÄÖ®ºóµÄºÅÂë£¨*±íÊ¾¸Ã×Ö¶Î²»ĞŞ¸Ä£©£º",p->phone);
-	scanf("%s", p->phone);
+	printf("å½“å‰å·ç ä¸ºï¼š%s\nè¯·è¾“å…¥ä¿®æ”¹ä¹‹åçš„å·ç ï¼ˆ*è¡¨ç¤ºè¯¥å­—æ®µä¸ä¿®æ”¹ï¼‰ï¼š",p->phone);
+	scanf("%s", phone);
 	if (strcmp(phone, "*") != 0){
 		strcpy(p->phone, phone);
 	}
-	printf("ĞŞ¸ÄÍê³É£¡\n");
+	printf("ä¿®æ”¹å®Œæˆï¼\n");
 }
 
 
 int menu(){
 	printf("=======================\n");
-	printf(" »¶Ó­½øÈëÍ¨Ñ¶Â¼³ÌĞò         \n ");
-	printf(" 1.ÏÔÊ¾È«²¿ÁªÏµÈË         \n");
-	printf("  2.Ìí¼ÓĞÂÁªÏµÈË             \n");
-	printf("  3.ĞŞ¸ÄÁªÏµÈËĞÅÏ¢      \n ");
-	printf(" 4.É¾³ıÁªÏµÈË                \n ");
-	printf(" 0.ÍË³öÍ¨Ñ¶Â¼³ÌĞò          \n");
+	printf(" æ¬¢è¿è¿›å…¥é€šè®¯å½•ç¨‹åº         \n ");
+	printf(" 1.æ˜¾ç¤ºå…¨éƒ¨è”ç³»äºº         \n");
+	printf("  2.æ·»åŠ æ–°è”ç³»äºº             \n");
+	printf("  3.ä¿®æ”¹è”ç³»äººä¿¡æ¯      \n ");
+	printf(" 4.åˆ é™¤è”ç³»äºº                \n ");
+	printf(" 0.é€€å‡ºé€šè®¯å½•ç¨‹åº          \n");
 	printf("=======================\n");
-	printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+	printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
 	int choice = 0;
 	scanf("%d", &choice);
 	return choice;
@@ -148,7 +148,7 @@ int main(){
 	while (1){
 		int choice = menu();
 		if (choice<0 || choice>4){
-			printf("ÄúµÄÊäÈëÓĞÎó£¬ÇëÖØĞÂÊäÈë£¡\n");
+			printf("æ‚¨çš„è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼\n");
 			continue;
 		}
 		if (choice == 0){
