@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 #include"game.h"
 
 
@@ -34,15 +34,15 @@ void game()
 	}
 		if (ret == 'Q')
 		{
-			printf("Æ½¾Ö\n");
+			printf("å¹³å±€\n");
 		}
 		else if (ret == 'X')
 		{
-			printf("Íæ¼ÒÊ¤³ö\n");
+			printf("ç©å®¶èƒœå‡º\n");
 		}
 		else if (ret == 'O')
 		{
-			printf("µçÄÔÊ¤³ö\n");
+			printf("ç”µè„‘èƒœå‡º\n");
 		}
 }
 
@@ -53,7 +53,7 @@ int main()
 		do
 		{
 			menu();
-			printf("ÇëÑ¡Ôñ£º");
+			printf("è¯·é€‰æ‹©ï¼š");
 			scanf("%d", &input);
 			switch (input)
 			{
@@ -61,10 +61,10 @@ int main()
 				game();
 				break;
 			case 0:
-				printf("ÓÎÏ·ÍË³ö£¡\n");
+				printf("æ¸¸æˆé€€å‡ºï¼\n");
 				break;
 			default:
-				printf("ÊäÈëÓĞÎó£¬ÖØĞÂÊäÈë¡£\n");
+				printf("è¾“å…¥æœ‰è¯¯ï¼Œé‡æ–°è¾“å…¥ã€‚\n");
 				break;
 			}
 		} while (input);
