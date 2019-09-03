@@ -1,9 +1,9 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<windows.h>
 
 
-//�ݹ�ͷǵݹ�ֱ�ʵ�����n��쳲�������
+//递归和非递归分别实现求第n个斐波那契数
 int fib1(int n){
 
 	if (n <= 2){
@@ -35,7 +35,7 @@ int main1(){
 	return 0;
 }
 
-//��дһ������ʵ��n^k��ʹ�õݹ�ʵ�� 
+//编写一个函数实现n^k，使用递归实现 
 
 int func(int n,int m){
 	if (m == 1){
@@ -56,7 +56,7 @@ int main2(){
 	return 0;
 }
 
-// дһ���ݹ麯��DigitSum(n)������һ���Ǹ����������������������֮�ͣ�
+// 写一个递归函数DigitSum(n)，输入一个非负整数，返回组成它的数字之和，
 
 int digitsum(int n){
 	if (n == 0){
@@ -172,10 +172,10 @@ int check(){
 int main11(){
 	int ret = check();
 	if (ret == 1){
-		printf("С��\n");
+		printf("小端\n");
 	}
 	else{
-		printf("���\n");
+		printf("大端\n");
 	}
 	system("pause");
 	return 0;
