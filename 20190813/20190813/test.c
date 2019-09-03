@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 
 #include "game.h"
 
@@ -40,7 +40,7 @@ int main()
 	do
 	{
 		menu();
-		printf("ÇëÊäÈëÑ¡Ôñ£º");
+		printf("è¯·è¾“å…¥é€‰æ‹©ï¼š");
 		scanf("%d",&input);
 		switch (input)
 		{
@@ -48,10 +48,10 @@ int main()
 			game();
 			break;
 		case 0:
-			printf("ÍË³öÓÎÏ·\n");
+			printf("é€€å‡ºæ¸¸æˆ\n");
 			break;
 		default:
-			printf("ÇëÊäÈëÕıÈ·Êı×Ö\n");
+			printf("è¯·è¾“å…¥æ­£ç¡®æ•°å­—\n");
 			break;
 		}
 
