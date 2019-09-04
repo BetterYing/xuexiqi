@@ -1,9 +1,7 @@
-
 #ifndef __GAME_H__
 #define __GAME_H__
 
 #include <stdio.h>
-#include<windows.h>
 #include <string.h>
 #include<stdlib.h>
 #include<time.h>
