@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 
 #include<stdio.h>
 #include<windows.h>
@@ -64,16 +64,16 @@ int main2(){
 		printf("    1:add               2:sub         \n");
 		printf("    3:mul               4:div          \n");
 		printf("****************************\n");
-		printf("ÇëÑ¡Ôñ£º");
+		printf("è¯·é€‰æ‹©ï¼š");
 		scanf("%d", &input);
 
 		if (input <= 4 && input >= 1){
-			printf("ÇëÊäÈë²Ù×÷Êı£º");
+			printf("è¯·è¾“å…¥æ“ä½œæ•°ï¼š");
 			scanf("%d %d", &x, &y);
 			ret = (*p[input])(x, y);
 		}
 		else{
-			printf("ÊäÈë´íÎó£¡");
+			printf("è¾“å…¥é”™è¯¯ï¼");
 	 	
 		}
 	printf("ret=%d\n", ret);

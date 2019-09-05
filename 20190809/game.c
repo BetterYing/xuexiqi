@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 
 #include"game.h"
 void InitBoard(char board[][3], int row, int col)
@@ -50,7 +50,7 @@ void PlayerMove(char board[][3], int row, int col)
 	int y = 0;
 	while (1)
 	{
-		printf("ÇëÊäÈë1-3µÄ×ø±ê£º");
+		printf("è¯·è¾“å…¥1-3çš„åæ ‡ï¼š");
 		scanf("%d%d", &x, &y);
 		if (x >= 1 && x <= 3 && y >= 1 && y <= 3)
 		{
@@ -61,12 +61,12 @@ void PlayerMove(char board[][3], int row, int col)
 			}
 			else
 			{
-				printf("´ËÎ»ÖÃÒÑ±»Õ¼ÓÃ\n");
+				printf("æ­¤ä½ç½®å·²è¢«å ç”¨\n");
 			}
 		}
 		else
 		{
-			printf("×ø±êÎ»ÖÃ²»ºÏ·¨\n");
+			printf("åæ ‡ä½ç½®ä¸åˆæ³•\n");
 		}
 	}
 }
@@ -131,7 +131,7 @@ void ComputerMove(char board[][3], int row, int col)
 
 	int x = 0;
 	int y = 0;
-	printf("µçÄÔÒÆ¶¯\n");
+	printf("ç”µè„‘ç§»åŠ¨\n");
 	while (1)
 	{
 		x = rand() % row + 1;

@@ -1,19 +1,19 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS
 
 #include<stdio.h>
 #include<windows.h>
 
 
-//±í´ïÊ½ÇóÖµ
+//è¡¨è¾¾å¼æ±‚å€¼
 
-//ÊäÈëÃèÊö:
-//Ò»ÐÐÈý¸öÊýa£¬b£¬c(1 <= a, b, c <= 10)
+//è¾“å…¥æè¿°:
+//ä¸€è¡Œä¸‰ä¸ªæ•°aï¼Œbï¼Œc(1 <= a, b, c <= 10)
 //1 + 2 * 3 = 7
 //1 * (2 + 3) = 5
 //1 * 2 * 3 = 6
 //(1 + 2) * 3 = 9
-//Êä³öÃèÊö :
-//	 ÄÜ¹»»ñµÃµÄ×î´óÖµ
+//è¾“å‡ºæè¿° :
+//	 èƒ½å¤ŸèŽ·å¾—çš„æœ€å¤§å€¼
 int Max(int a, int b){
 	(a + b) > (a*b) ? (a + b) : (a*b);
 }
