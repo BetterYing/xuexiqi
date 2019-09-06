@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 
 
 #include<stdio.h>
 #include<windows.h>
@@ -8,12 +8,12 @@
 int main1(){
 	int  a, b;
 	int tem = 0;
-	printf("Òª½»»»µÄÊý£º");
+	printf("è¦äº¤æ¢çš„æ•°ï¼š");
 	scanf("%d%d", &a, &b);
 	tem = a;
 	a = b;
 	b = tem;
-	printf("½»»»ºóµÄ£º%d %d\n",a,b);
+	printf("äº¤æ¢åŽçš„ï¼š%d %d\n",a,b);
 	system("pause");
 	return 0;
 }
@@ -21,12 +21,12 @@ int main1(){
 int main2(){
 
 	int a, b;
-	printf("Òª½»»»µÄÊý£º");
+	printf("è¦äº¤æ¢çš„æ•°ï¼š");
 	scanf("%d%d", &a, &b);
 	a = a + b;
 	b = a - b;
 	a = a - b;
-	printf("½»»»ºóµÄ£º%d %d\n", a, b);
+	printf("äº¤æ¢åŽçš„ï¼š%d %d\n", a, b);
 	system("pause");
 	return 0;
 }
@@ -50,7 +50,7 @@ int main3(){
 
 int main4(){
 	int a, b, c;
-	printf("ÊäÈëÒªÅÅÁÐµÄÊý£º");
+	printf("è¾“å…¥è¦æŽ’åˆ—çš„æ•°ï¼š");
 	scanf("%d%d%d", &a, &b,&c);
 	if (a > b){
 		if (b > c){
@@ -140,7 +140,7 @@ int main8(){
 	return 0;
 }
 
-//²ÂÊý×Ö/////////////////////////
+//çŒœæ•°å­—/////////////////////////
 int menu(){
 	printf("*****************************\n");
 	printf("***********1.play************\n");
@@ -151,17 +151,17 @@ void game(){
 	int randnum = rand() % 100 + 1;
 	int input = 0;
 	while (1){
-		printf("ÇëÊäÈë²ÂµÄÊý×Ö£º ");
+		printf("è¯·è¾“å…¥çŒœçš„æ•°å­—ï¼š ");
 		scanf("%d", &input);
 		if (input > randnum){
-			printf("²Â´óÁË\n");
+			printf("çŒœå¤§äº†\n");
 
 		}
 		else if (input < randnum){
-			printf("²ÂÐ¡ÁË\n");
+			printf("çŒœå°äº†\n");
 		}
 		else{
-			printf("²Â¶ÔÁË£¡\n");
+			printf("çŒœå¯¹äº†ï¼\n");
 			break;
 		}
 	}
@@ -172,7 +172,7 @@ int main9(){
 	srand((unsigned)time(NULL));
 	do{
 		menu();
-		printf("ÇëÊäÈëÑ¡Ôñ£º");
+		printf("è¯·è¾“å…¥é€‰æ‹©ï¼š");
 		scanf("%d", &num);
 		switch (num){
 		case 1:
@@ -181,7 +181,7 @@ int main9(){
 		case 0:
 			break;
 		default:
-			printf("ÖØÐÂÊäÈë£º\n");
+			printf("é‡æ–°è¾“å…¥ï¼š\n");
 			break;
 		}
 	} while (num);
@@ -206,7 +206,7 @@ int main10(){
 	return 0;
 }
 
-//2. ¼ÆËã1/1-1/2+1/3-1/4+1/5 ¡­¡­ + 1/99 - 1/100 µÄÖµ¡£ 
+//2. è®¡ç®—1/1-1/2+1/3-1/4+1/5 â€¦â€¦ + 1/99 - 1/100 çš„å€¼ã€‚ 
 int main11(){
 	int i = 0;
 	double tmp = 1;
