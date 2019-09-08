@@ -4,8 +4,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-void MatchSport()
-{
+void MatchSport() {
 	int A = 0;
 	int B = 0;
 	int C = 0;
@@ -15,22 +14,19 @@ void MatchSport()
 	for (B = 1; B <= 5; B++)
 	for (C = 1; C <= 5; C++)
 	for (D = 1; D <= 5; D++)
-	for (E = 1; E <= 5; E++)
-	{
+	for (E = 1; E <= 5; E++) {
 		if (((B == 2) + (A == 3) == 1 &&
 			(B == 2) + (E == 4) == 1 &&
 			(C == 1) + (D == 2) == 1 &&
 			(C == 5) + (D == 3) == 1 &&
 			(E == 4) + (A == 1) == 1) == 1)
 
-		if (120 == A*B*C*D*E)
-		{
+		if (120 == A*B*C*D*E){
 			printf("A=%d  B=%d  C=%d  D=%d  E=%d\n", A, B, C, D, E);
 		}
 	}
 }
-int main()
-{
+int main(){
 	MatchSport();
 	system("pause");
 	return 0;
@@ -40,28 +36,21 @@ int main()
 
 
 #if 0
-int main()
-{
+int main(){
 	int A = 0, B = 0, C = 0, D = 0;
 	int FD;
 	int i;
-	for (i = 1; i <= 4; i++)
-	{
-
-		if (i == 1)
-		{
+	for (i = 1; i <= 4; i++){
+		if (i == 1){
 			A = 1; C = 1; FD = 1; D = 0;
 		}
-		if (i == 2) 
-		{
+		if (i == 2) {
 			A = 0; C = 0; FD = 1; D = 0;
 		}
-		if (i == 3) 
-		{
+		if (i == 3) {
 			A = 0; C = 1; FD = 0; D = 0;
 		}
-		if (i == 4) 
-		{
+		if (i == 4) {
 			A = 0; C = 1; FD = 1; D = 1;
 		}
 		if (A + B + C + D + FD == 1 && FD == D)
@@ -75,19 +64,16 @@ int main()
 
 
 
-//»ñÈ¡Ò»¸öÊı¶ş½øÖÆĞòÁĞÖĞËùÓĞµÄÅ¼ÊıÎ»ºÍÆæÊıÎ»£¬·Ö±ğÊä³ö¶ş½øÖÆĞòÁĞ¡£
-int main()
-{
+//è·å–ä¸€ä¸ªæ•°äºŒè¿›åˆ¶åºåˆ—ä¸­æ‰€æœ‰çš„å¶æ•°ä½å’Œå¥‡æ•°ä½ï¼Œåˆ†åˆ«è¾“å‡ºäºŒè¿›åˆ¶åºåˆ—ã€‚
+int main(){
 	int num = 30;
 	int i = 0;
-	for (i = 31; i >= 1; i -= 2)
-	{
+	for (i = 31; i >= 1; i -= 2){
 		printf("%d ", ((num >> i) & 1));
 	}
 	
 	printf("\n");
-	for (i = 30; i >=0; i -= 2)
-	{
+	for (i = 30; i >=0; i -= 2){
 		printf("%d ", ((num >> i) & 1));
 	}
 	printf("\n");
@@ -100,7 +86,7 @@ int main()
 
 
 
-//ÔÚÆÁÄ»ÉÏ´òÓ¡Ñî»ÔÈı½Ç¡£ 
+//åœ¨å±å¹•ä¸Šæ‰“å°æ¨è¾‰ä¸‰è§’ã€‚ 
 //1
 //1 1
 //1 2 1
@@ -108,30 +94,24 @@ int main()
 //1 4 6 4 1
 
 
-int func(int arr[10][10])
-{
+int func(int arr[10][10]){
 	int i = 0;
 	int j = 0;
-	for (i = 0; i < 10; i++)
-	{
+	for (i = 0; i < 10; i++){
 		arr[i][0] = arr[i][i] = 1;
-		for (j = 1; j <= i; j++)
-		{
+		for (j = 1; j <= i; j++){
 			arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
 		}
 	}
-	for (i = 0; i<10; i++)
-	{
-		for (j = 0; j <= i; j++)
-		{
+	for (i = 0; i<10; i++){
+		for (j = 0; j <= i; j++){
 			printf("%3d ", arr[i][j]);
 		}
 		printf("\n");
 	}
 
 }
-int main()
-{
+int mainï¼ˆï¼‰{
 	int arr[10][10] = { 0 };
 	func(arr);
 	system("pause");
@@ -148,25 +128,22 @@ int main()
 
 
 
-//4.±à³ÌÊµÏÖ£º
-//Á½¸öint£¨32Î»£©ÕûÊımºÍnµÄ¶ş½øÖÆ±í´ïÖĞ£¬ÓĞ¶àÉÙ¸öÎ»(bit)²»Í¬£¿
-//ÊäÈëÀı×Ó :
+//4.ç¼–ç¨‹å®ç°ï¼š
+//ä¸¤ä¸ªintï¼ˆ32ä½ï¼‰æ•´æ•°må’Œnçš„äºŒè¿›åˆ¶è¡¨è¾¾ä¸­ï¼Œæœ‰å¤šå°‘ä¸ªä½(bit)ä¸åŒï¼Ÿ
+//è¾“å…¥ä¾‹å­ :
 //1999 2299
-//Êä³öÀı×Ó : 7
-int func(int a,int b)
-{
+//è¾“å‡ºä¾‹å­ : 7
+int func(int a,int b){
 	int ret = a^b;
 	int count = 0;
-	while (ret)
-	{
+	while (ret){
 		ret = ret&(ret - 1);
 		count++;
 	}
 	return count;
 }
 
-int main()
-{
+int main(){
 	int count =0;
 	int n = 1999;
 	int m = 2299;
@@ -178,19 +155,16 @@ int main()
 
 
 
-// Êä³öÒ»¸öÕûÊıµÄÃ¿Ò»Î»¡£ 
+// è¾“å‡ºä¸€ä¸ªæ•´æ•°çš„æ¯ä¸€ä½ã€‚ 
 
-void print(int n)
-{
-	if (n > 9)
-	{
+void print(int n){
+	if (n > 9){
 		print(n / 10);
 	}
 	printf("%d ",n%10);
 }
 
-int main()
-{
+int main(){
 	int n = 5678;
 	print(n);
 	printf("\n");
@@ -201,13 +175,11 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int num = -1;
 	int i = 0;
 	int count = 0;
-	while (num != 0)
-	{
+	while (num != 0){
 		count++;
 		num = num&(num - 1);
 	}
