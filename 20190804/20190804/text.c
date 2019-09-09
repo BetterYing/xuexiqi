@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include<windows.h>
 
-int main()
-{
+int main(){
 	int i, flag = 1;
 	double tmp = 1, sum = 0;
 
-	for (i = 1; i <= 100; i++)
-	{
+	for (i = 1; i <= 100; i++){
 		tmp = flag * 1.0 / i;
 		sum += tmp;
 		flag = -flag;
@@ -24,16 +22,14 @@ int main()
 
 
 
-//Ã»³öÀ´
-//int main()
-//{
+
+//int main(){
 //	int a, b;
 //	scanf("%d %d", &a, &b);
 //	int smal = a < b ? a : b;
 //	int i;
 //	int max = 0;
-//	for (i = 0; i <= smal; i++)
-//	{
+//	for (i = 0; i <= smal; i++){
 //		if (a % i == 0 && b % i == 0)
 //		{
 //			max = i;
@@ -41,10 +37,10 @@ int main()
 //	}
 //	if (max == 1)
 //	{
-//		printf("Á½Êý»¥ÖÊ\n");
+//		printf("ä¸¤æ•°äº’è´¨\n");
 //		return 0;
 //	}
-//	printf("¹«Ô¼Êý:%d\n",max);
+//	printf("å…¬çº¦æ•°:%d\n",max);
 //	system("pause");
 //	return 0;
 //}
@@ -54,48 +50,37 @@ int main()
 
 
 
-///Ã»¶®
 
-//int main()
-//{
+
+//int main(){
 //	int a, b, c;
-//	if (a > b)
-//	{
-//		if (b > c)
-//		{
+//	if (a > b){
+//		if (b > c){
 //			printf("%d %d %d\n", a, b, c);
 //		}
-//		if (b < c)
-//		{
+//		if (b < c){
 //			printf("%d %d %d\n", a, c, b);
 //		}
-//		if (a < c)
-//		{
+//		if (a < c){
 //			printf("%d %d %d\n", c,a,b);
 //		}
-//		if (a < c)
-//		{
+//		if (a < c){
 //			printf("%d %d %d\n", a,c, b);
 //		}
 //
 //
 //
-//		if (a < b)
-//		{
-//			if (b > c)
-//			{
+//		if (a < b){
+//			if (b > c){
 //				printf("%d %d %d\n", a, b, c);
 //			}
-//			if (b < c)
-//			{
+//			if (b < c){
 //				printf("%d %d %d\n", a, c, b);
 //			}
-//			if (a < c)
-//			{
+//			if (a < c){
 //				printf("%d %d %d\n", c, a, b);
 //			}
-//			if (a < c)
-//			{
+//			if (a < c){
 //				printf("%d %d %d\n", a, c, b);
 //			}
 //
@@ -119,22 +104,18 @@ int main()
 
 
 
-Çó×îÐ¡ÖµºÍ´ÎÐ¡Öµ
-//int main()
-//{
+æ±‚æœ€å°å€¼å’Œæ¬¡å°å€¼
+//int main(){
 //	int arr[5]= { 7, 5, 8, 9, -6 };
-//	int min = 0x79999999;// Ê®½øÖÆ32Î»×îÐ¡Öµ= 0x80000000;
-//	int sec = 0x79999999;// Ê®½øÖÆ32Î»×î´óÖµ= 0x79999999;
+//	int min = 0x79999999;// åè¿›åˆ¶32ä½æœ€å°å€¼= 0x80000000;
+//	int sec = 0x79999999;// åè¿›åˆ¶32ä½æœ€å¤§å€¼= 0x79999999;
 //	int i;
-//	for (i = 0; i <= 4; i++)
-//	{
-//		if (min > arr[i])
-//		{
+//	for (i = 0; i <= 4; i++){
+//		if (min > arr[i]){
 //			sec = min;
 //			min = arr[i];
 //		}
-//		else if (sec < arr[i])
-//		{
+//		else if (sec < arr[i]){
 //			sec = arr[i];
 //		}
 //	}
@@ -147,8 +128,7 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int a = 5, b = 5;
 	int tem;
 	int i=10;
@@ -169,10 +149,9 @@ int main()
 
 
 
-int main()
-{
+int main(){
 
-	//ÕâÖÖ·½·¨Êý¾Ý¿ÉÄÜ»á³¬³ö·¶Î§£»
+	//è¿™ç§æ–¹æ³•æ•°æ®å¯èƒ½ä¼šè¶…å‡ºèŒƒå›´ï¼›
 	/*int a = 5,b = 9;
 	int tem;
 	printf("a=%d,b=%d\n",a,b);
@@ -190,8 +169,7 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int a = 5, b = 10;
 	int tem;
 	printf("a=%d,b=%d\n", a, b);
@@ -209,8 +187,7 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int ch = 0;
 	while ((ch = getchar()) != EOF)
 		putchar(ch);
@@ -220,11 +197,9 @@ int main()
 }
 
 
-int main()
-{
+int main(){
 	int i = 1;
-	while (i <= 10)
-	{
+	while (i <= 10){
 		printf( "%d ", i);
 		i++;
 
@@ -237,13 +212,10 @@ int main()
 
 
 
-int main()
-
-{
+int main(){
 	int day = 0;
 	scanf("%d", &day);
-	switch (day)
-	{
+	switch (day){
 	case 1:
 	case 2:
 	case 3:
@@ -256,7 +228,7 @@ int main()
 		printf("weekend\n");
 		break;
 	default:
-		printf("ÊäÈëÓÐÎó\n");
+		printf("è¾“å…¥æœ‰è¯¯\n");
 		break;
 	}
 	system("pause");
@@ -268,15 +240,12 @@ int main()
 int main()
 {
 	int i = 0;
-	printf("ÊäÈëÒ»¸öÊý£»\n");
+	printf("è¾“å…¥ä¸€ä¸ªæ•°ï¼›\n");
 	scanf("%d",&i);
-	if (i % 2 == 1)
-	{
-		printf("ÊÇÆæÊý\n");
-	}
-	else
-	{
-		printf("²»ÊÇÆæÊý\n");
+	if (i % 2 == 1){
+		printf("æ˜¯å¥‡æ•°\n");
+	} else {
+		printf("ä¸æ˜¯å¥‡æ•°\n");
 	}
 	system("pause");
 	return 0;
@@ -285,18 +254,13 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int age = 0;
 	scanf("%d", &age);
-	if (age < 18)
-	{
-		printf("Î´³ÉÄê\n");
-
-	}
-	else
-	{
-		printf("³ÉÄê\n");
+	if (age < 18){
+		printf("æœªæˆå¹´\n");
+	} else {
+		printf("æˆå¹´\n");
 	}
 
 	system("pause");
@@ -306,8 +270,7 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int num = 10;
 	int *p = &num;
 	*p = 20;
