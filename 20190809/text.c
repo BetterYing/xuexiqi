@@ -2,61 +2,48 @@
 #include"game.h"
 
 
-void menu()
-{
+void menu(){
 	printf("**********************\n");
 	printf("*********1.play*******\n");
 	printf("*********0.exit*******\n");
 	printf("**********************\n");
 }
-void game()
-{
+void game(){
 	char ret = 0;
 	char board[3][3] = { 0 };
 	InitBoard(board, 3, 3);
 	ShowBoard(board, 3, 3);
-	while (1)
-	{
+	while (1){
 		PlayerMove(board, 3, 3);
 		ret = IsWin(board, 3, 3);
-		if (ret != ' ')
-		{
+		if (ret != ' '){
 			break;
 		}
 		ShowBoard(board, 3, 3);
 		ComputerMove(board, 3, 3);
 		ret = IsWin(board, 3, 3);
-		if (ret != ' ')
-		{
+		if (ret != ' '){
 			break;
 		}
 		ShowBoard(board, 3, 3);
 	}
-		if (ret == 'Q')
-		{
+		if (ret == 'Q'){
 			printf("平局\n");
-		}
-		else if (ret == 'X')
-		{
+		} else if (ret == 'X') {
 			printf("玩家胜出\n");
-		}
-		else if (ret == 'O')
-		{
+		} else if (ret == 'O') {
 			printf("电脑胜出\n");
 		}
 }
 
-int main()
-{
+int main(){
 	int input = 0;
 		srand((unsigned int)time(NULL));
-		do
-		{
+		do{
 			menu();
 			printf("请选择：");
 			scanf("%d", &input);
-			switch (input)
-			{
+			switch (input){
 			case 1:
 				game();
 				break;
