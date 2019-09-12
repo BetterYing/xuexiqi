@@ -5,27 +5,23 @@
 #include <math.h>
 #include <assert.h>
 
-//ÓĞÒ»¸ö×Ö·ûÊı×éµÄÄÚÈİÎª:"student a am i",
-//	ÇëÄã½«Êı×éµÄÄÚÈİ¸ÄÎª"i am a student".
-//	ÒªÇó£º
-//	²»ÄÜÊ¹ÓÃ¿âº¯Êı¡£
-//	Ö»ÄÜ¿ª±ÙÓĞÏŞ¸ö¿Õ¼ä£¨¿Õ¼ä¸öÊıºÍ×Ö·û´®µÄ³¤¶ÈÎŞ¹Ø£©¡£
+//æœ‰ä¸€ä¸ªå­—ç¬¦æ•°ç»„çš„å†…å®¹ä¸º:"student a am i",
+//	è¯·ä½ å°†æ•°ç»„çš„å†…å®¹æ”¹ä¸º"i am a student".
+//	è¦æ±‚ï¼š
+//	ä¸èƒ½ä½¿ç”¨åº“å‡½æ•°ã€‚
+//	åªèƒ½å¼€è¾Ÿæœ‰é™ä¸ªç©ºé—´ï¼ˆç©ºé—´ä¸ªæ•°å’Œå­—ç¬¦ä¸²çš„é•¿åº¦æ— å…³ï¼‰ã€‚
 
-int my_strlen(const char *str)
-{
+int my_strlen(const char *str){
 	int count = 0;
 	assert(str);
-	while(*str != '\0')
-	{
+	while(*str != '\0'){
 		count++;
 		str++;
 	}
 	return count;
 }
-void reverse(char a[], int left, int right)
-{
-	while (left<right)
-	{
+void reverse(char a[], int left, int right){
+	while (left<right){
 		char tmp = a[left];
 		a[left] = a[right];
 		a[right] = tmp;
@@ -33,30 +29,25 @@ void reverse(char a[], int left, int right)
 		right--;
 	}
 }
-char* reverse_string(char a[])
-{
+char* reverse_string(char a[]){
 	int i = 0;
 	int left = 0;
 	int right = my_strlen(a) - 1;
 	reverse(a, left, right);
-	while (a[i] != '\0')
-	{
+	while (a[i] != '\0'){
 		left = i;
-		while ((a[i] != '\0') && (a[i] != ' '))
-		{
+		while ((a[i] != '\0') && (a[i] != ' ')){
 			i++;
 		}
 		right = i - 1;
 		reverse(a, left, right);
-		if (a[i] != '\0')
-		{
+		if (a[i] != '\0'){
 			i++;
 		}
 	}
 	return a;
 }
-int main()
-{
+int main(){
 	char a[]="student a am i";
 	reverse_string(a);
 	printf("%s\n",a);
@@ -67,28 +58,24 @@ int main()
 
 
 #if 0
-unsigned int reverse_bit(unsigned int value)
-{
+unsigned int reverse_bit(unsigned int value){
 	int arr[32] = { 0 };
 	unsigned int sum = 0;
-	for (int i = 0; i < 32; i++)
-	{
+	for (int i = 0; i < 32; i++){
 		arr[i] = value & 1;
 		value = value >> 1;
 	}
-	for (int i = 0; i < 32; i++)
-	{
+	for (int i = 0; i < 32; i++){
 		sum = sum + arr[i] * pow(2, 32 - 1 - i);
 	}
 	return sum;
 }
-int main()
-{
+int main(){
 	int num = 0;
-	printf("ÇëÊäÈëÒª·­×ªµÄÊı£º");
+	printf("è¯·è¾“å…¥è¦ç¿»è½¬çš„æ•°ï¼š");
 	scanf("%d", &num);
 	unsigned int ret = reverse_bit(num);
-	printf("·­×ª¶ş½øÖÆºóµÄÖµÎª£º");
+	printf("ç¿»è½¬äºŒè¿›åˆ¶åçš„å€¼ä¸ºï¼š");
 	printf("%u\n", ret);
 	system("pause");
 	return 0;
@@ -97,55 +84,45 @@ int main()
 
 
 
-//ÅĞ¶ÏÒ»¸ö×Ö·û´®ÊÇ·ñÎªÁíÍâÒ»¸ö×Ö·û´®Ğı×ªÖ®ºóµÄ×Ö·û´®
-void swap(char* x, char* y)
-{
+//åˆ¤æ–­ä¸€ä¸ªå­—ç¬¦ä¸²æ˜¯å¦ä¸ºå¦å¤–ä¸€ä¸ªå­—ç¬¦ä¸²æ—‹è½¬ä¹‹åçš„å­—ç¬¦ä¸²
+void swap(char* x, char* y){
 	char tmp = *x;
 	*x = *y;
 	*y = tmp;
 }
-void turn(char arr[])
-{
+void turn(char arr[]){
 	int num = 0;
 	int i = 0;
 	int j = 0;
 	int len = sizeof(arr) / sizeof(arr[0]);
-	printf("ÇëÊäÈëÒª×óĞıµÄ×Ö·ûÊı:\n");
+	printf("è¯·è¾“å…¥è¦å·¦æ—‹çš„å­—ç¬¦æ•°:\n");
 	scanf("%d", &num);
 	num = num % 4;
-	for (i = 0; i < num; i++)
-	{
-		for (j = 0; j < len - 1; j++)
-		{
+	for (i = 0; i < num; i++){
+		for (j = 0; j < len - 1; j++){
 			swap(&arr[j], &arr[j + 1]);
 		}
 	}
-	printf("ARR1×óĞıºóµÄÖµ£º%s\n", arr);
+	printf("ARR1å·¦æ—‹åçš„å€¼ï¼š%s\n", arr);
 
 }
 
-int Exchange(char* arr1, char* arr2)
-{
+int Exchange(char* arr1, char* arr2){
 	int i = 0;
 	int len = sizeof(arr1) / sizeof(arr1[0]);
-	for (i = 0; i < len; i++)
-	{
-		if (arr1[i] != arr2[i])
-		{
-			printf("²»ÏàµÈ\n");
+	for (i = 0; i < len; i++){
+		if (arr1[i] != arr2[i]){
+			printf("ä¸ç›¸ç­‰\n");
 			return 0;
-		}
-		else
-		{
-			printf("ÏàµÈ\n");
+		} else{
+			printf("ç›¸ç­‰\n");
 		}
 	}
 	return 1;
 }
 
 
-int main()
-{
+int main(){
 	char arr1[] = { "ABCD" };
 	char arr2[] = { "BCAD" };
 
@@ -158,37 +135,32 @@ int main()
 
 
 
-////1.ÊµÏÖÒ»¸öº¯Êı£¬¿ÉÒÔ×óĞı×Ö·û´®ÖĞµÄk¸ö×Ö·û¡£ 
-//ABCD×óĞıÒ»¸ö×Ö·ûµÃµ½BCDA
-//ABCD×óĞıÁ½¸ö×Ö·ûµÃµ½CDAB
+////1.å®ç°ä¸€ä¸ªå‡½æ•°ï¼Œå¯ä»¥å·¦æ—‹å­—ç¬¦ä¸²ä¸­çš„kä¸ªå­—ç¬¦ã€‚ 
+//ABCDå·¦æ—‹ä¸€ä¸ªå­—ç¬¦å¾—åˆ°BCDA
+//ABCDå·¦æ—‹ä¸¤ä¸ªå­—ç¬¦å¾—åˆ°CDAB
 
-void swap(char* x, char* y)
-{
+void swap(char* x, char* y){
 	char tmp = *x;
 	*x = *y;
 	*y = tmp;
 }
-void turn(char arr[])
-{
+void turn(char arr[]){
 	int num = 0;
 	int i = 0;
 	int j = 0;
 	int len = sizeof(arr) / sizeof(arr[0]);
-	printf("ÇëÊäÈëÒª×óĞıµÄ×Ö·ûÊı:\n");
+	printf("è¯·è¾“å…¥è¦å·¦æ—‹çš„å­—ç¬¦æ•°:\n");
 	scanf("%d", &num);
 	num = num % 4;
-	for (i = 0; i < num; i++)
-	{
-		for (j = 0; j < len - 1; j++)
-		{
+	for (i = 0; i < num; i++){
+		for (j = 0; j < len - 1; j++){
 			swap(&arr[j], &arr[j + 1]);
 		}
 	}
 	printf("%s\n", arr);
 
 }
-int main()
-{
+int main(){
 	char arr[] = { "ABCD" };
 	turn(arr);
 	system("pause");
@@ -199,18 +171,14 @@ int main()
 
 
 
-//µ÷ÕûÊı×éÊ¹ÆæÊıÈ«²¿¶¼Î»ÓÚÅ¼ÊıÇ°Ãæ
-void func(int arr[], int len)
-{
+//è°ƒæ•´æ•°ç»„ä½¿å¥‡æ•°å…¨éƒ¨éƒ½ä½äºå¶æ•°å‰é¢
+void func(int arr[], int len){
 	int i = 0;
 	int j = 0;
 	int tem = 0;
-	for (i = 0; i < len; i++)
-	{
-		for (j = i + 1; j < len; j++)
-		{
-			if (arr[i] % 2 == 1 && arr[j] % 2 != 1)
-			{
+	for (i = 0; i < len; i++){
+		for (j = i + 1; j < len; j++){
+			if (arr[i] % 2 == 1 && arr[j] % 2 != 1){
 				tem = arr[i];
 				arr[i] = arr[j];
 				arr[j] = tem;
@@ -218,15 +186,13 @@ void func(int arr[], int len)
 			continue;
 		}
 	}
-	for (i = 0; i < len; i++)
-	{
+	for (i = 0; i < len; i++){
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
 }
 
-int main()
-{
+int main(){
 	int arr[8] = { 1, 3, 6, 7, 4, 9, 8, 2 };
 	int len = sizeof(arr) / sizeof(arr[0]);
 	func(arr, len);
@@ -236,46 +202,35 @@ int main()
 
 
 
-////ÑîÊÏ¾ØÕó 
-//ÓĞÒ»¸ö¶şÎ¬Êı×é.
-//Êı×éµÄÃ¿ĞĞ´Ó×óµ½ÓÒÊÇµİÔöµÄ£¬Ã¿ÁĞ´ÓÉÏµ½ÏÂÊÇµİÔöµÄ.
-//ÔÚÕâÑùµÄÊı×éÖĞ²éÕÒÒ»¸öÊı×ÖÊÇ·ñ´æÔÚ¡£
-//Ê±¼ä¸´ÔÓ¶ÈĞ¡ÓÚO(N);
+////æ¨æ°çŸ©é˜µ 
+//æœ‰ä¸€ä¸ªäºŒç»´æ•°ç»„.
+//æ•°ç»„çš„æ¯è¡Œä»å·¦åˆ°å³æ˜¯é€’å¢çš„ï¼Œæ¯åˆ—ä»ä¸Šåˆ°ä¸‹æ˜¯é€’å¢çš„.
+//åœ¨è¿™æ ·çš„æ•°ç»„ä¸­æŸ¥æ‰¾ä¸€ä¸ªæ•°å­—æ˜¯å¦å­˜åœ¨ã€‚
+//æ—¶é—´å¤æ‚åº¦å°äºO(N);
 
-int yang(int arr[][3],int data)
-{
+int yang(int arr[][3],int data){
 	int x = 0;
 	int y = 2;
-	while ((x <= 2) && (y >= 0))
-	{
-		if (arr[x][y] < data)
-		{
+	while ((x <= 2) && (y >= 0)){
+		if (arr[x][y] < data){
 			x++;
-		}
-		else if (arr[x][y]>data)
-		{
+		} else if (arr[x][y]>data) {
 			y--;
-		}
-		else
-		{
+		} else{
 			return 1;
 		}
 	}
 	return 0;
 }
 
-int main()
-{
-	int arr[][3] = { 1, 2, 3 , 4, 5, 6 ,7, 8, 9 }£»
+int main(){
+	int arr[][3] = { 1, 2, 3 , 4, 5, 6 ,7, 8, 9 }ï¼›
 	int k;
 	scanf("%d", &k);
-	if (yang(arr, k)) 
-	{
-		printf("ÕÒµ½ÁË!\n");
-	}
-	else
-	{
-		printf("Ã»ÕÒµ½!\n");
+	if (yang(arr, k)) {
+		printf("æ‰¾åˆ°äº†!\n");
+	} else{
+		printf("æ²¡æ‰¾åˆ°!\n");
 	}
 	system("pause");
 	return 0;
@@ -284,18 +239,16 @@ int main()
 
 
 
-////±à³ÌÊµÏÖ£º 
-//Ò»×éÊı¾İÖĞÖ»ÓĞÒ»¸öÊı×Ö³öÏÖÁËÒ»´Î¡£
-//ÆäËûËùÓĞÊı×Ö¶¼ÊÇ³É¶Ô³öÏÖµÄ¡£
-//ÇëÕÒ³öÕâ¸öÊı×Ö¡££¨Ê¹ÓÃÎ»ÔËËã£©
-int main()
-{
+////ç¼–ç¨‹å®ç°ï¼š 
+//ä¸€ç»„æ•°æ®ä¸­åªæœ‰ä¸€ä¸ªæ•°å­—å‡ºç°äº†ä¸€æ¬¡ã€‚
+//å…¶ä»–æ‰€æœ‰æ•°å­—éƒ½æ˜¯æˆå¯¹å‡ºç°çš„ã€‚
+//è¯·æ‰¾å‡ºè¿™ä¸ªæ•°å­—ã€‚ï¼ˆä½¿ç”¨ä½è¿ç®—ï¼‰
+int main(){
 	int arr[7] = { 1, 3, 4, 6, 4, 3, 1 };
 	int len = sizeof(arr) / sizeof(arr[0]);
 	int i = 0;
 	int ret = 0;
-	for (i = 0; i < len; i++)
-	{
+	for (i = 0; i < len; i++){
 		ret ^= arr[i];
 	}
 	printf("%d\n",ret);
@@ -304,9 +257,8 @@ int main()
 }
 
 
-//2.²»Ê¹ÓÃ£¨a+b£©/2ÕâÖÖ·½Ê½£¬ÇóÁ½¸öÊıµÄÆ½¾ùÖµ¡£ 
-int main()
-{
+//2.ä¸ä½¿ç”¨ï¼ˆa+bï¼‰/2è¿™ç§æ–¹å¼ï¼Œæ±‚ä¸¤ä¸ªæ•°çš„å¹³å‡å€¼ã€‚ 
+int main(){
 	int a = 25;
 	int b = 5;
 	printf("%d\n", (a&b) + ((a^b) >> 1));
@@ -320,22 +272,17 @@ int main()
 
 
 
-int main()
-{
+int main(){
 	int arr[10] = { 8, 4, 7, 0, -1, 9, 2, -3, 3, 1 };
 	int max = 0x80000000;
 	int sec = 0x80000000;
 	int i;
 
-	for (i = 0; i < 10; i++)
-	{
-		if (max < arr[i])
-		{
+	for (i = 0; i < 10; i++){
+		if (max < arr[i]){
 			sec = max;
 			max = arr[i];
-		}
-		else if (sec < arr[i])
-		{
+		} else if (sec < arr[i]){
 			sec = arr[i];
 		}
 	}
