@@ -2,16 +2,14 @@
 
 #include "game.h"
 
-void menu()
-{
+void menu(){
 	printf("*************************\n");
 	printf("*********1.play**********\n");
 	printf("*********0.exit**********\n");
 	printf("*************************\n");
 
 }
-void game()
-{
+void game(){
 
 	char mine[ROWS][COLS] = { 0 };
 	char mineInfo[ROWS][COLS] = { 0 };
@@ -33,17 +31,14 @@ void game()
 
 
 
-int main()
-{
+int main(){
 	int input = 0;
 	srand((unsigned int)time(NULL));
-	do
-	{
+	do{
 		menu();
 		printf("请输入选择：");
 		scanf("%d",&input);
-		switch (input)
-		{
+		switch (input){
 		case 1:
 			game();
 			break;
