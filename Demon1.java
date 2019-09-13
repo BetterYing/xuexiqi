@@ -1,6 +1,6 @@
 // 1. 编写程序数一下 1到 100 的所有整数中出现多少个数字9。 
 
-public class Test1{
+public class Demon1{
     public static void main(String[] args){
         int i = 0;
         int count = 0;
