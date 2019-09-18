@@ -1,8 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<windows.h>
-
-
 //递归和非递归分别实现求第n个斐波那契数
 int fib1(int n){
 
