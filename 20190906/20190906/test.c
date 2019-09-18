@@ -4,8 +4,7 @@
 #include<string.h>
 #include<windows.h>
 
-int main()
-{
+int main(){
 	char strget[50], strA[20] = "", strB[20] = "";
 	int a, i, index, nall, num, result = 1;
 	scanf("%s", strget);
@@ -38,8 +37,7 @@ int main()
 	}
 	if (result)
 		printf("true\n");
-	else
-	{
+	else{
 		printf("false\n");
 	}
 
