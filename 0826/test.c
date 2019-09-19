@@ -2,13 +2,10 @@
 #include<stdio.h>
 #include<windows.h>
 
-
-//被3整除
-
 int main(){
 	int r = 0;
 	int l = 0;
-	printf("输入数列区间：");
+	printf("脢盲脠毛脢媒脕脨脟酶录盲拢潞");
 	scanf("%d %d", &l, &r);
 	int count = 0, count1 = 0, result = 0;
 	while (l % 3 != 1){
