@@ -1,14 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
-#include<stdio.h>
-#include<windows.h>
-
-
 #include  "contact.h"
 
 
-void menu()
-{
+void menu(){
 	printf("***************************************\n");
 	printf("********   1.add      2.del    ********\n");
 	printf("********   3.search   4.modify ********\n");
@@ -23,37 +18,30 @@ int main(){
     int n = 0;
 	for (n = 0; n < 7; n++){
 		
-		printf("ÇëÊäÈëÒª½øÐÐµÄ²Ù×÷£º");
+		printf("Ã‡Ã«ÃŠÃ¤ÃˆÃ«Ã’ÂªÂ½Ã¸ÃÃÂµÃ„Â²Ã™Ã—Ã·Â£Âº");
 		scanf("%d", &n);
 		if (n == 0){
 			break;
-		}
-		else if (n == 1){
+		} else if (n == 1){
 			add_contact(&people);
 			break;
-		}
-		else if (n == 2){
+		} else if (n == 2){
 			del_contact(&people);
 			break;
-		}
-		else if (n == 3){
+		} else if (n == 3){
 			search_contact(&people);
 			break;
-		}
-		else if (n == 4){
+		} else if (n == 4){
 			modify_contact(&people);
 			break;
-		}
-		else if (n == 5){
+		} else if (n == 5){
 			show_contact(&people);
 			break;
-		}
-		else  {
+		} else {
 			clear_contact(&people);
 			break;
 		}
 	}
-
 	system("pause");
 	return 0;
 }
