@@ -1,23 +1,22 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 
 
 #include "contact.h"
 
-
 int add_contact(pContact pcon){
 	if (pcon->count_user == MAX){
-		printf("Í¨Ñ¶Â¼ÒÑÂú\n");
+		printf("é€šè®¯å½•å·²æ»¡\n");
 		return -1;
 	}     
 	else{
-		printf("ÇëÊäÈëĞÕÃû£º");
+		printf("è¯·è¾“å…¥å§“åï¼š");
 		scanf("%s", pcon->people[pcon->count_user].name);
-		printf("ÇëÊäÈëĞÔ±ğ£º");
+		printf("è¯·è¾“å…¥æ€§åˆ«ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].sex);
-		printf("ÇëÊäÈëÄêÁä£º");
+		printf("è¯·è¾“å…¥å¹´é¾„ï¼š");
 		scanf("%d", &pcon->people[pcon->count_user].age);
-		printf("ÇëÊäÈëµç»°£º");
+		printf("è¯·è¾“å…¥ç”µè¯ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].tel);
-		printf("ÇëÊäÈëµØÖ·£º");
+		printf("è¯·è¾“å…¥åœ°å€ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].add);
 		pcon->count_user++;
 	}
@@ -38,7 +37,7 @@ int del_contact(pContact pcon){
 	}
 	else
 	{
-		printf("²»´æÔÚ£¡\n");
+		printf("ä¸å­˜åœ¨ï¼\n");
 		return -1;
 	}
 
@@ -46,7 +45,7 @@ int del_contact(pContact pcon){
 int search_contact(pContact pcon){
 	int i;
 	char name[NAME_LIGHT];
-	printf("ÇëÊäÈëÒª²éÕÒµÄĞÕÃû£º");
+	printf("è¯·è¾“å…¥è¦æŸ¥æ‰¾çš„å§“åï¼š");
 	scanf("%s", name);
 	for (i = 0; i < pcon->count_user; i++)
 	{
@@ -69,21 +68,21 @@ int modify_contact(pContact pcon){
 	int rel = search_contact(pcon);
 	if (rel != -1)
 	{
-		printf("ÇëÊäÈëĞÕÃû£º");
+		printf("è¯·è¾“å…¥å§“åï¼š");
 		scanf("%s", pcon->people[pcon->count_user].name);
-		printf("ÇëÊäÈëĞÔ±ğ£º");
+		printf("è¯·è¾“å…¥æ€§åˆ«ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].sex);
-		printf("ÇëÊäÈëÄêÁä£º");
+		printf("è¯·è¾“å…¥å¹´é¾„ï¼š");
 		scanf("%d", &pcon->people[pcon->count_user].age);
-		printf("ÇëÊäÈëµç»°£º");
+		printf("è¯·è¾“å…¥ç”µè¯ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].tel);
-		printf("ÇëÊäÈëµØÖ·£º");
+		printf("è¯·è¾“å…¥åœ°å€ï¼š");
 		scanf("%s", pcon->people[pcon->count_user].add);
 		return 1;
 	}
 	else
 	{
-		printf("ÊäÈë´íÎó!\n");
+		printf("è¾“å…¥é”™è¯¯!\n");
 		return -1;
 	}
 }
