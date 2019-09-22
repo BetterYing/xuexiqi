@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 #include<windows.h>
 
@@ -30,13 +30,11 @@ int main(){
 //	int i;
 //	int max = 0;
 //	for (i = 0; i <= smal; i++){
-//		if (a % i == 0 && b % i == 0)
-//		{
+//		if (a % i == 0 && b % i == 0) {
 //			max = i;
 //		}
 //	}
-//	if (max == 1)
-//	{
+//	if (max == 1) {
 //		printf("两数互质\n");
 //		return 0;
 //	}
@@ -83,12 +81,7 @@ int main(){
 //			if (a < c){
 //				printf("%d %d %d\n", a, c, b);
 //			}
-//
-//
-//
 //	}
-//
-//
 //
 //	system("pause");
 //	return 0;
@@ -114,8 +107,7 @@ int main(){
 //		if (min > arr[i]){
 //			sec = min;
 //			min = arr[i];
-//		}
-//		else if (sec < arr[i]){
+//		} else if (sec < arr[i]){
 //			sec = arr[i];
 //		}
 //	}
