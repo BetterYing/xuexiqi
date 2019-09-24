@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 
 
 #include <stdio.h>
 #include<windows.h>
@@ -70,6 +70,7 @@ unsigned int reverse_bit(unsigned int value){
 	}
 	return sum;
 }
+
 int main(){
 	int num = 0;
 	printf("请输入要翻转的数：");
@@ -79,7 +80,6 @@ int main(){
 	printf("%u\n", ret);
 	system("pause");
 	return 0;
-
 }
 
 
@@ -114,7 +114,7 @@ int Exchange(char* arr1, char* arr2){
 		if (arr1[i] != arr2[i]){
 			printf("不相等\n");
 			return 0;
-		} else{
+		} else {
 			printf("相等\n");
 		}
 	}
@@ -216,7 +216,7 @@ int yang(int arr[][3],int data){
 			x++;
 		} else if (arr[x][y]>data) {
 			y--;
-		} else{
+		} else {
 			return 1;
 		}
 	}
@@ -229,7 +229,7 @@ int main(){
 	scanf("%d", &k);
 	if (yang(arr, k)) {
 		printf("找到了!\n");
-	} else{
+	} else {
 		printf("没找到!\n");
 	}
 	system("pause");
@@ -248,7 +248,7 @@ int main(){
 	int len = sizeof(arr) / sizeof(arr[0]);
 	int i = 0;
 	int ret = 0;
-	for (i = 0; i < len; i++){
+	for (i = 0; i < len; i++) {
 		ret ^= arr[i];
 	}
 	printf("%d\n",ret);
@@ -278,8 +278,8 @@ int main(){
 	int sec = 0x80000000;
 	int i;
 
-	for (i = 0; i < 10; i++){
-		if (max < arr[i]){
+	for (i = 0; i < 10; i++) {
+		if (max < arr[i]) {
 			sec = max;
 			max = arr[i];
 		} else if (sec < arr[i]){
