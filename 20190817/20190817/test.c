@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WARNINGS 
 
 #include<stdio.h>
 #include<windows.h>
@@ -64,20 +64,20 @@ int main2(){
 	return 0;
 }
 
-//ÇóSn=a+aa+aaa+aaaa+aaaaaµÄÇ°5ÏîÖ®ºÍ£¬ÆäÖĞaÊÇÒ»¸öÊı×Ö
+//æ±‚Sn=a+aa+aaa+aaaa+aaaaaçš„å‰5é¡¹ä¹‹å’Œï¼Œå…¶ä¸­aæ˜¯ä¸€ä¸ªæ•°å­—
 
 int mysum(int n,int m){
 	int i;
 	int tem = 0;
 	int sum = 0;
-	for (i = 0; i <m; i++){
+	for (i = 0; i < m; i++){
 		tem = tem * 10 + n;
 		sum = sum + tem;
 	}
 	return sum;
 }
 int main3(){
-	int ret=mysum(2, 5);
+	int ret = mysum(2, 5);
 	printf("%d\n", ret);
 	system("pause");
 	return 0;
@@ -132,21 +132,20 @@ int main5(){
 	return 0;
 }
 
-//strcmp±È½Ï×Ö·û´®ÊÇ·ñÏàµÈ£»
+//strcmpæ¯”è¾ƒå­—ç¬¦ä¸²æ˜¯å¦ç›¸ç­‰ï¼›
 int  main6(){
 	char psw[] = "123456";
 	int count = 3;
 	int i = 0;
 	for (i = 0; i < 3; i++){
-		printf("ÇëÊäÈëÃÜÂë£º");
+		printf("è¯·è¾“å…¥å¯†ç ï¼š");
 		scanf("%s", psw);
 		if (strcmp(psw, "123456") == 0){
 			printf("log in\n");
 			break;
-		}
-		else{
+		} else {
 			count--;
-			printf("Äã»¹ÓĞ%d´Î»ú»á\n", count);
+			printf("ä½ è¿˜æœ‰%dæ¬¡æœºä¼š\n", count);
 		}
 	}
 	system("pause");

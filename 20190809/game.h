@@ -12,7 +12,5 @@ void PlayerMove(char board[][3],int row,int col);
 char IsWin(char board[][3],int row,int col);
 void ComputerMove(char board[][3], int row, int col);
 
-
-
 #endif
 

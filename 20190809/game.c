@@ -47,8 +47,7 @@ void PlayerMove(char board[][3], int row, int col){
 			} else {
 				printf("此位置已被占用\n");
 			}
-		}
-		else{
+		} else {
 			printf("坐标位置不合法\n");
 		}
 	}
@@ -98,8 +97,8 @@ char IsWin(char board[][3], int row, int col){
 	return ' ';
 }
 
-void ComputerMove(char board[][3], int row, int col){
 
+void ComputerMove(char board[][3], int row, int col){
 	int x = 0;
 	int y = 0;
 	printf("电脑移动\n");
