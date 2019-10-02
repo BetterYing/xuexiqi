@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS 
-
 #include "contact.h"
 
 int add_contact(pContact pcon){
