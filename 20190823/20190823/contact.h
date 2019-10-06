@@ -14,8 +14,7 @@
 #define ADD_LIGHT 30
 #define MAX 1000
 
-struct peopleInfo
-{
+struct peopleInfo{
 	char name[NAME_LIGHT];
 	char sex[SEX_LIGHT];
 	int age;
@@ -23,8 +22,7 @@ struct peopleInfo
 	char add[ADD_LIGHT];
 };
 
-struct contact
-{
+struct contact{
 	struct peopleInfo people[MAX];
 	int count_user;
 };
