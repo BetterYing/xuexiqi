@@ -97,7 +97,6 @@ char IsWin(char board[][3], int row, int col){
 	return ' ';
 }
 
-
 void ComputerMove(char board[][3], int row, int col){
 	int x = 0;
 	int y = 0;
