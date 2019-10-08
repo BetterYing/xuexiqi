@@ -4,8 +4,6 @@
 #include <string.h>
 #include<stdlib.h>
 
-
-
 int rece(char *p){
 	if (*p != '\0'){
 		p++;
