@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 #include<windows.h>
-
 int main(){
 	int i, flag = 1;
 	double tmp = 1, sum = 0;
@@ -16,7 +15,6 @@ int main(){
 	system("pause");
 	return 0;
 }
-
 
 
 
