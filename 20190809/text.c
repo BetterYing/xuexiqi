@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include"game.h"
 
-
 void menu(){
 	printf("**********************\n");
 	printf("*********1.play*******\n");
@@ -55,6 +54,7 @@ int main(){
 				break;
 			}
 		} while (input);
+	
 		system("pause");
 		return 0;
 }
