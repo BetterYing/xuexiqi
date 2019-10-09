@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<math.h>
 #include <string.h>
@@ -17,8 +17,6 @@ int main(){
 	system("pause");
 	return 0;
 }
-
-
 
 
 #if 0
@@ -119,8 +117,6 @@ int main(){
 	system("pause");
 	return 0;
 }
-
-
 
 
 //实现一个函数判断year是不是润年
